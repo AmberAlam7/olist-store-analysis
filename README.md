@@ -2,7 +2,7 @@
 
 
 
-E-commerce data analysis using PostgreSQL, Excel and Power BI.
+E-commerce data analysis using PostgreSQL and Power BI.
 
 Data: Olist e-commerce dataset (9 CSV files), provided through the ExcelR bootcamp program.
 Project brief: five business questions from the ExcelR Project Bootcamp.
@@ -16,8 +16,8 @@ Questions answered:
 
 Key findings:
 - Weekdays have 77% of orders, weekends 23%
-- 43,928 orders are 5-star and paid by credit card
+- 43,981 orders are 5-star and paid by credit card
 - Late orders average 2.57 stars, on-time orders 4.29
 
 My role: I loaded the data into PostgreSQL, checked data quality, wrote all SQL queries,
-and built the Excel and Power BI dashboards on my own.
+and built the Power BI dashboards on my own.
