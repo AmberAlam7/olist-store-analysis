@@ -22,6 +22,8 @@ An end-to-end analysis of Olist e-commerce data covering order patterns, payment
 | 4 | Average price vs payment value (São Paulo) | **108** vs **136** |
 | 5 | Shipping days vs review score | **~21** days (1-star) to **~10** days (5-star) |
 
+![KPI 1](output/KPI1.png)
+![KPI 5](output/KPI5.png)
 ![Olist Dashboard](Olist%20dashboard.png)
 
 
@@ -49,7 +51,9 @@ An end-to-end analysis of Olist e-commerce data covering order patterns, payment
 - Reviewed order status distribution and percentages
 - Handled multiple reviews and payment types per order to prevent join fan-out and inflated counts
 - Checked for missing delivery dates before calculating delivery metrics
-
+![Row counts](output/row_counts.png)
+![Multiple reviews](output/multiple_review.png)
+![Multiple payments](output/multiple_payment.png)
 ---
 
 ## My Contribution
