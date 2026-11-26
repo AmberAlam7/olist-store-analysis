@@ -1,40 +1,68 @@
-# 🛒 Olist E-Commerce Data Analysis | PostgreSQL & Power BI
+# 🛒 Olist Store Data Analysis | PostgreSQL & Power BI
 
-## 📌 Project Overview
-E-commerce data analysis using **PostgreSQL and Power BI** to explore payment patterns, delivery performance, customer behaviour, and customer satisfaction.
+## Project Overview
 
-📂 **Dataset:** Olist E-Commerce Dataset (9 CSV files), provided through the ExcelR Bootcamp program.
+An end-to-end analysis of Olist e-commerce data covering order patterns, payment behaviour, delivery performance, and customer satisfaction. Data was loaded and analysed in PostgreSQL and visualised in Power BI.
 
-🎯 **Project Brief:** Five real-world business questions assigned as part of the ExcelR Project Bootcamp.
+| | |
+|---|---|
+| **Dataset** | Olist E-Commerce Dataset (9 CSV files), provided by the ExcelR Bootcamp program |
+| **Context** | Five business questions assigned in the ExcelR Project Bootcamp |
+| **Tools** | PostgreSQL (loading, validation, queries) and Power BI (dashboard) |
 
-## 🛠️ Tools & Technologies
-- 🐘 **PostgreSQL:** Data loading, validation, SQL queries, joins, aggregations, and business analysis.
-- 📊 **Power BI:** Interactive dashboards, KPI visualisation, and business insights.
+---
 
-## 🧹 Data Checks & Validation
-- 🔢 Checked row counts across seven tables.
-- 📊 Analysed order status distribution and percentages.
-- 🔗 Identified multiple reviews and payment types per order to prevent join fan-out and inflated counts.
-- ⚠️ Checked for missing delivery dates.
+## Business Questions & Results
 
-## 📈 Business Questions & Analysis
-1. 📅 Weekday vs Weekend Payment Statistics.
-2. ⭐ Number of 5-Star Orders Paid by Credit Card.
-3. 🚚 Average Delivery Days for Pet Shop Orders.
-4. 💰 Average Price and Payment Values for São Paulo Customers.
-5. 📦 Relationship Between Shipping Days and Review Scores.
+| KPI | Business Question | Result |
+|:---:|---|---|
+| 1 | Share of orders on weekdays vs weekends | **77.26%** weekday, **22.74%** weekend |
+| 2 | 5-star orders paid by credit card | **43,981** orders |
+| 3 | Average delivery days for Pet Shop orders | **10.91** days |
+| 4 | Average price vs payment value (São Paulo) | **108** vs **136** |
+| 5 | Shipping days vs review score | **~21** days (1-star) to **~10** days (5-star) |
 
-## 💡 Key Findings
-- 📅 **Order Distribution:** Weekdays accounted for 77% of orders, while weekends accounted for 23%.
-- ⭐ **Customer Reviews & Payments:** Identified 43,981 orders with 5-star reviews and credit card payments.
-- 🚚 **Delivery Performance:** Late orders received an average review score of 2.57, compared with 4.29 for on-time orders.
+---
 
-## 👩‍💻 My Contribution
-- Independently loaded and managed 9 CSV files in PostgreSQL.
-- Performed data quality checks and validation.
-- Wrote SQL queries to answer all five business questions.
-- Designed and developed interactive Power BI dashboards.
-- Analysed results and presented meaningful business insights.
+## Key Insights
 
-## 🎯 Project Objective
-To transform raw e-commerce data into meaningful business insights and understand how payment behaviour, delivery performance, and customer satisfaction relate to overall business operations.
+- **Weekdays dominate:** about 77% of orders are placed on weekdays.
+- **Credit cards lead among happy customers:** among 5-star orders, credit card is the top payment type (~44K), followed by boleto (~11K).
+- **Faster delivery means happier customers:** shipping days fall steadily as review scores rise. Late orders averaged a review score of **2.57** vs **4.29** for on-time orders (from SQL analysis).
+- **São Paulo payments exceed item price:** average payment value (136) is higher than average item price (108), likely reflecting freight and other add-ons.
+
+---
+
+## Recommendations
+
+- **Prioritise on-time delivery.** It is the clearest lever for improving review scores.
+- **Keep credit card payments prominent,** since they are preferred by the most satisfied customers.
+
+---
+
+## Data Checks & Validation
+
+- Verified row counts across loaded tables
+- Reviewed order status distribution and percentages
+- Handled multiple reviews and payment types per order to prevent join fan-out and inflated counts
+- Checked for missing delivery dates before calculating delivery metrics
+
+---
+
+## My Contribution
+
+- Loaded and managed all 9 CSV files in PostgreSQL
+- Performed data quality checks and validation
+- Wrote SQL queries to answer all five business questions
+- Designed and built the interactive Power BI dashboard
+- Turned results into business insights and recommendations
+
+---
+
+## Repository Structure
+
+```text
+├── sql/        # SQL queries for the five business questions
+├── images/     # Dashboard screenshot
+└── README.md
+```
